@@ -18,6 +18,7 @@
 
 * Commit history
     * [pepsi-01] Init commit
+    * [pepsi-02] changed route method of append, update sheet
 
 <br>
 
@@ -45,9 +46,9 @@
        --header 'sheetRange: **:**'
       ```
       This will get the sheet data.
-   2. The second method is to use the `PUT` method.
+   2. The second method is to use the `POST` method.
       ```
-       curl --location --request PUT 'localhost:3000' \
+       curl --location --request POST 'localhost:3000' \
        --header 'spreadsheetId: your sheet id' \
        --header 'sheetName: sheet name for append data' \
        --header 'sheetRange: **:**' \
@@ -60,9 +61,9 @@
        }'
       ```
       This will `append` the data to the sheet.
-   3. The third method is to use the `POST` method.
+   3. The third method is to use the `PUT` method.
       ```
-       curl --location --request POST 'localhost:3000' \
+       curl --location --request PUT 'localhost:3000' \
        --header 'spreadsheetId: your sheet id' \
        --header 'sheetName: sheet name for update data' \
        --header 'sheetRange: **:**' \
