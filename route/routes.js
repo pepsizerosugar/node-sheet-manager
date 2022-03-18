@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
 });
 
 // append sheet values
-router.put('/', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const spreadsheetId = req.headers.spreadsheetid;
         const range = await getRange(req);
@@ -52,7 +52,7 @@ router.put('/', async (req, res) => {
 });
 
 // update sheet values
-router.post('/', async (req, res) => {
+router.put('/', async (req, res) => {
     try {
         const spreadsheetId = req.headers.spreadsheetid;
         const range = await getRange(req);
